@@ -1,18 +1,31 @@
-# QAVILO — Digital Menu Service
+# QAVILO — Digital Menu Studio
 
-A focused café menu service website built with React, Vite and Framer Motion.
+A multi-page, responsive digital studio website built with React and Vite. The visual direction is Modern Heritage Luxury: chocolate brown, warm champagne and copper, editorial serif typography, and hospitality-led imagery.
+
+## Pages
+- Home
+- Services
+- Menu Library (75+ sample items, category filters and product detail sheets)
+- Our Process
+- The Studio
+- Contact
+
+Navigation uses hash routes (`#/services`, `#/work`, etc.) so the site works on static hosting such as GitHub Pages without server-side route configuration.
 
 ## Run locally
-1. Open this folder in VS Code.
-2. Run `npm install`
-3. Run `npm run dev`
+```bash
+npm install
+npm run dev
+```
 
-## Included
-- Grayscale café-service visual direction (charcoal, black and white).
-- Focused sections for commercial cafés, specialty coffee and matcha concepts.
-- Photographic menu cards using external Unsplash image URLs.
-- Click any sample item to view its ingredients in a clean detail sheet.
-- No prices, recipe ratios or gram measurements.
-- WhatsApp consultation links for both supplied numbers.
+## Build for production
+```bash
+npm run build
+```
+Vite writes the production site to `dist/`.
 
-Menu items and ingredients are sample content and should be replaced with each café's approved menu before launch.
+## Notes
+- WhatsApp consultation links are configured for the two supplied contact numbers.
+- Product sample cards show descriptions and ingredient details only; no prices or gram quantities are displayed.
+- Dark mode is included.
+- Color changes are immediate; there are no color-transition animations.
