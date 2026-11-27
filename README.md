@@ -1,31 +1,38 @@
 # QAVILO — Digital Menu Studio
 
-A multi-page, responsive digital studio website built with React and Vite. The visual direction is Modern Heritage Luxury: chocolate brown, warm champagne and copper, editorial serif typography, and hospitality-led imagery.
+A conversion-first redesign for QAVILO. The homepage is built to sell the service clearly: what the client gets, why it helps their café, examples of the menu experience, and direct contact.
 
-## Pages
-- Home
-- Services
-- Menu Library (75+ sample items, category filters and product detail sheets)
-- Our Process
-- The Studio
-- Contact
+## Stack
 
-Navigation uses hash routes (`#/services`, `#/work`, etc.) so the site works on static hosting such as GitHub Pages without server-side route configuration.
+- React 18 + React DOM
+- Vite 6
+- Three.js + React Three Fiber + Drei for the interactive 3D coffee scene
+- Framer Motion for UI transitions
+- Lucide React icons
 
 ## Run locally
+
 ```bash
 npm install
 npm run dev
 ```
 
-## Build for production
+Create a production build with:
+
 ```bash
 npm run build
 ```
-Vite writes the production site to `dist/`.
+
+## Design direction
+
+- Commercial-first messaging and clear contact actions
+- Espresso / copper / warm cream palette
+- Procedural 3D ceramic coffee cup, saucer, coffee surface and floating coffee beans
+- The 3D scene is an accent to support the product story, not a full-screen distraction
+- Existing 6-page structure and 75 sample menu products retained
 
 ## Notes
-- WhatsApp consultation links are configured for the two supplied contact numbers.
-- Product sample cards show descriptions and ingredient details only; no prices or gram quantities are displayed.
-- Dark mode is included.
-- Color changes are immediate; there are no color-transition animations.
+
+The 3D scene is generated from Three.js geometry and rendered with React Three Fiber. It does not require external 3D model downloads. The scene has a non-WebGL fallback.
+
+Before deploying, run `npm install` and `npm run build` locally, then publish the project using the included GitHub Actions workflow.
